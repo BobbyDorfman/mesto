@@ -6,3 +6,13 @@
     margin: 0;
     padding: 0;
 }
+
+@media screen and (max-width: 1000px) {
+    .footer__copyright {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16.94px;
+        text-align: left;
+        margin-left: 19px;
+    }
+}

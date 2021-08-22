@@ -19,12 +19,12 @@
             <article class="profile__info">
                 <h1 class="profile__info_title">Жак-Ив Кусто</h1>
                 <p class="profile__info_subtitle">Исследователь океана</p>
-                <button class="edit_button" type="button">
-                    <img class="edit_button__pencil" src="./image/Edit.svg" alt="Элемент редактирования">
+                <button class="edit-button" type="button">
+                    <img class="edit-button__pencil" src="./image/Edit.svg" alt="Элемент редактирования">
                 </button>
             </article>
-            <button class="add_button" type="button">
-                <img class="add_button__plus" src="./image/Add button.svg" alt="Знак - добавить">
+            <button class="add-button" type="button">
+                <img class="add-button__plus" src="./image/Add_button.svg" alt="Знак - добавить">
             </button>
         </section>
 
@@ -33,50 +33,66 @@
                 <img class="element__image" src="./image/Sochi.jpg" 
                 alt="Жак-Ив Кусто - граффити в Сочи">
                 <h2 class="element__title">Сочи</h2>
-                <button class="element_button" type="button">
-                    <img class="element_button__like" src="./image/Like.svg" alt="Лайк">
+                <button class="element-button" type="button">
+                    <img class="element-button__like" src="./image/Like.svg" alt="Лайк">
                 </button>
             </article>
             <article class="element">
-                <img class="element__image" src="./image/dmitry-tur-5sPYYR6lG28-unsplash (1).jpg" 
+                <img class="element__image" src="./image/dmitry-tur-5sPYYR6lG28-unsplash_(1).jpg" 
                 alt="Шоанинский храм">
                 <h2 class="element__title">Карачаевск</h2>
-                <button class="element_button" type="button">
-                    <img class="element_button__like" src="./image/Like.svg" alt="Лайк">
+                <button class="element-button" type="button">
+                    <img class="element-button__like" src="./image/Like.svg" alt="Лайк">
                 </button>
             </article>
             <article class="element">
                 <img class="element__image" src="./image/depositphotos_97410192-stock-photo-pork-fish-on-the-reef.jpg" 
                 alt="Фотография - свиная рыба на рифе">
                 <h2 class="element__title">Свиная рыба на рифе</h2>
-                <button class="element_button" type="button">
-                    <img class="element_button__like" src="./image/Like.svg" alt="Лайк">
+                <button class="element-button" type="button">
+                    <img class="element-button__like" src="./image/Like.svg" alt="Лайк">
                 </button>
             </article>
             <article class="element">
                 <img class="element__image" src="./image/depositphotos_273905924-stock-photo-a-jacques-cousteau-old-book.jpg" 
                 alt="Фотография - старая книга Жак-Ив Кусто">
                 <h2 class="element__title">Старая книга Жак-Ив Кусто</h2>
-                <button class="element_button" type="button">
-                    <img class="element_button__like" src="./image/Like.svg" alt="Лайк">
+                <button class="element-button" type="button">
+                    <img class="element-button__like" src="./image/Like.svg" alt="Лайк">
                 </button>
             </article>
             <article class="element">
                 <img class="element__image" src="./image/jacques_featured.jpg" 
                 alt="Фотография - скульптура Жак-Ив Кусто под водой">
                 <h2 class="element__title">Легенда дайвинга Жак-Ив Кусто</h2>
-                <button class="element_button" type="button">
-                    <img class="element_button__like" src="./image/Like.svg" alt="Лайк">
+                <button class="element-button" type="button">
+                    <img class="element-button__like" src="./image/Like.svg" alt="Лайк">
                 </button>
             </article>
             <article class="element">
                 <img class="element__image" src="./image/17039.jpg" 
                 alt="Жак-Ив Кусто ​под водой">
                 <h2 class="element__title">Жак-Ив Кусто ​под водой</h2>
-                <button class="element_button" type="button">
-                    <img class="element_button__like" src="./image/Like.svg" alt="Лайк">
+                <button class="element-button" type="button">
+                    <img class="element-button__like" src="./image/Like.svg" alt="Лайк">
                 </button>
             </article>
+        </section>
+
+        <section class="edit-form" aria-label="Редактор профиля">
+            <div class="edit-form__popup">
+                <button class="close-icon" type="button">
+                    <img class="close-icon__image" src="./image/Close_Icon.svg" alt="Иконка - закрыть">
+                </button>
+                <h2 class="edit-form__title">Редактировать профиль</h2>
+                <form class="edit-form__field" name="form">
+                    <input type="text" name="text" class="edit-form__subtitle">
+                    <div class="edit-form__line"></div>
+                    <input type="text" name="text" class="edit-form__subtitle">
+                    <div class="edit-form__line"></div>
+                    <button type="submit" class="submit-button">Сохранить</button>
+                </form>
+            </div>
         </section>
     </main>
 
@@ -84,5 +100,7 @@
         <p class="footer__copyright">&copy; 2021 Mesto Russia</p>
     </footer>
   </div>
+
+  <script src="./script.js"></script>
 </body>
 </html>

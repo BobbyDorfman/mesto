@@ -3,6 +3,22 @@
     flex-direction: row;
     position: relative;
     max-width: 880px;
-    max-height: 120px;
+    min-height: 120px;
     margin: 40px auto 51px;
+}
+
+@media screen and (min-width: 1281px) {
+    .profile {
+        max-width: 880px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .profile {
+        flex-direction: column;
+        max-width: 282px;
+        min-height: 286px;
+        margin: 42px auto 36px;
+    }
 }

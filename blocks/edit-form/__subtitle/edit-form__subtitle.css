@@ -1,0 +1,12 @@
+.edit-form__subtitle {
+    width: 100%;
+    min-height: 14px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.94px;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}

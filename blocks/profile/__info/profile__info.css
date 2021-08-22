@@ -7,3 +7,10 @@
     margin: auto 0 auto 30px;
     padding: 0;
 }
+
+@media screen and (max-width: 1000px) {
+    .profile__info {
+        max-width: 245px;
+        margin: 26px auto 36px;
+    }
+}

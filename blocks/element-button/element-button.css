@@ -1,4 +1,4 @@
-.element_button {
+.element-button {
     display: block;
     width: 22px;
     height: 19px;
@@ -7,7 +7,12 @@
     right: 20px;
     margin: 0;
     padding: 0;
-    border: none; 
+    border: none;
     outline: none;
     background: #fff;
+}
+
+.element-button:hover {
+    opacity: 0.5;
+    cursor: pointer;
 }
