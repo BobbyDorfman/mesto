@@ -17,4 +17,4 @@
 
 ## Ссылка на GitHub Pages
 
-https://bobbydorfman.github.io/teamwork/
+https://bobbydorfman.github.io/mesto/
