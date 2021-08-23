@@ -7,6 +7,7 @@
     color: #fff;
     margin: auto 0 auto 30px;
     padding: 0;
+    border: 1px red solid;
 }
 
 @media screen and (max-width: 1000px) {
