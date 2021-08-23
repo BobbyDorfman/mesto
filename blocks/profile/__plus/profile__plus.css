@@ -1,12 +1,12 @@
-.profile__add-button_plus {
+.profile__plus {
     width: 22px;
     height: 22px;
+    background-color: rgb(0, 0, 0);
     margin: auto;
-    background-color: #000;
 }
 
 @media screen and (max-width: 1000px) {
-    .profile__add-button_plus {
+    .profile__plus {
         width: 16px;
         height: 16px;
     }
