@@ -1,10 +1,10 @@
-let openPopupButton = document.querySelector('.edit-button');
+let openPopupButton = document.querySelector('.profile__edit-button');
 let popup = document.querySelector('.edit-form');
-let closePopupButton = document.querySelector('.close-icon');
+let closePopupButton = document.querySelector('.edit-form__close-icon');
 let title = document.querySelectorAll('.edit-form__subtitle')[0];
 let subtitle = document.querySelectorAll('.edit-form__subtitle')[1];
-let infoTitle = document.querySelector('.profile__info_title');
-let infoSubtitle = document.querySelector('.profile__info_subtitle');
+let infoTitle = document.querySelector('.profile__title');
+let infoSubtitle = document.querySelector('.profile__subtitle');
 let submitButton = document.querySelector('.submit-button');
 let formElement = document.querySelector('.edit-form__field');
 

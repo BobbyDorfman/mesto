@@ -1,4 +1,4 @@
-.close-icon {
+.edit-form__close-icon {
     position: absolute;
     top: -40px;
     right: -40px;
@@ -10,13 +10,13 @@
     border: none;
 }
 
-.close-icon:hover {
+.edit-form__close-icon:hover {
     opacity: 0.6;
     cursor: pointer;
 }
 
 @media screen and (max-width: 426px) {
-    .close-icon {
+    .edit-form__close-icon {
         max-width: 20px;
         max-height: 20px;
         top: -36px;

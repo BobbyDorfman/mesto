@@ -1,18 +1,15 @@
-.element-button {
-    display: block;
+.element__button {
+    display: flex;
     width: 22px;
     height: 19px;
-    position: absolute;
-    bottom: 30px;
-    right: 20px;
-    margin: 0;
+    margin: auto 20px auto 0;
     padding: 0;
     border: none;
     outline: none;
     background: #fff;
 }
 
-.element-button:hover {
+.element__button:hover {
     opacity: 0.5;
     cursor: pointer;
 }

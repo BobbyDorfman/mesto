@@ -1,6 +1,5 @@
-.element-button__like_active {
+.element__button_like {
     display: block;
-    background-image: url(../../../../image/Union.svg);
     max-width: 100%;
     max-height: 100%;
     margin: 0;
