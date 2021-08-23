@@ -1,8 +1,6 @@
 .edit-button {
-    display: flex;
-    position: absolute;
-    top: calc(50% - 22px);
-    right: 0;
+    display: block;
+    align-self: center;
     width: 24px;
     height: 24px;
     border: 1px solid #FFFFFF;
