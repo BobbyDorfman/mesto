@@ -1,7 +1,6 @@
 .profile {
     display: flex;
     flex-direction: row;
-    position: relative;
     max-width: 880px;
     min-height: 120px;
     margin: 40px auto 51px;
