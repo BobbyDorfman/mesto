@@ -1,0 +1,17 @@
+.element__button-delite {
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    width: 18px;
+    height: 19.3px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background:rgba(0, 0, 0, 0);
+}
+
+.element__button-delite:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
