@@ -28,86 +28,7 @@
             </button>
         </section>
 
-        <section class="elements" aria-label="Фотоальбом">
-            <article class="element">
-                <button class="element__button-delite">
-                    <img class="element__delite" src="./image/Delite_2.svg" alt="Иконка удаления карточки">
-                </button>
-                <img class="element__image" src="./image/Sochi.jpg" 
-                alt="Жак-Ив Кусто - граффити в Сочи">
-                <div class="element__down">
-                    <h2 class="element__title">Сочи</h2>
-                    <button class="element__button" type="button">
-                        <img class="element__like" src="./image/Like.svg" alt="Лайк">
-                    </button>
-                </div>
-            </article>
-            <article class="element">
-                <button class="element__button-delite">
-                    <img class="element__delite" src="./image/Delite_2.svg" alt="Иконка удаления карточки">
-                </button>
-                <img class="element__image" src="./image/dmitry-tur-5sPYYR6lG28-unsplash_(1).jpg" 
-                alt="Шоанинский храм">
-                <div class="element__down">
-                    <h2 class="element__title">Карачаевск</h2>
-                    <button class="element__button" type="button">
-                        <img class="element__like" src="./image/Like.svg" alt="Лайк">
-                    </button>
-                </div>
-            </article>
-            <article class="element">
-                <button class="element__button-delite">
-                    <img class="element__delite" src="./image/Delite_2.svg" alt="Иконка удаления карточки">
-                </button>
-                <img class="element__image" src="./image/depositphotos_97410192-stock-photo-pork-fish-on-the-reef.jpg" 
-                alt="Фотография - свиная рыба на рифе">
-                <div class="element__down">
-                    <h2 class="element__title">Свиная рыба на рифе</h2>
-                    <button class="element__button" type="button">
-                        <img class="element__like" src="./image/Like.svg" alt="Лайк">
-                    </button>
-                </div>
-            </article>
-            <article class="element">
-                <button class="element__button-delite">
-                    <img class="element__delite" src="./image/Delite_2.svg" alt="Иконка удаления карточки">
-                </button>
-                <img class="element__image" src="./image/depositphotos_273905924-stock-photo-a-jacques-cousteau-old-book.jpg" 
-                alt="Фотография - старая книга Жак-Ив Кусто">
-                <div class="element__down">
-                    <h2 class="element__title">Старая книга Жак-Ив Кусто</h2>
-                    <button class="element__button" type="button">
-                        <img class="element__like" src="./image/Like.svg" alt="Лайк">
-                    </button>
-                </div>
-            </article>
-            <article class="element">
-                <button class="element__button-delite">
-                    <img class="element__delite" src="./image/Delite_2.svg" alt="Иконка удаления карточки">
-                </button>
-                <img class="element__image" src="./image/jacques_featured.jpg" 
-                alt="Фотография - скульптура Жак-Ив Кусто под водой">
-                <div class="element__down">
-                    <h2 class="element__title">Легенда дайвинга Жак-Ив Кусто</h2>
-                    <button class="element__button" type="button">
-                        <img class="element__like" src="./image/Like.svg" alt="Лайк">
-                    </button>
-                </div>
-            </article>
-            <article class="element">
-                <button class="element__button-delite">
-                    <img class="element__delite" src="./image/Delite_2.svg" alt="Иконка удаления карточки">
-                </button>
-                <img class="element__image" src="./image/17039.jpg" 
-                alt="Жак-Ив Кусто ​под водой">
-                <div class="element__down">
-                    <h2 class="element__title">Жак-Ив Кусто ​под водой</h2>
-                    <button class="element__button" type="button">
-                        <img class="element__like" src="./image/Like.svg" alt="Лайк">
-                    </button>
-                </div>
-            </article>
-        </section>
+        <section class="elements" aria-label="Фотоальбом"></section>
 
         <section class="edit-form" aria-label="Редактор профиля">
             <div class="edit-form__popup">
@@ -128,6 +49,21 @@
         <p class="footer__copyright">&copy; 2021 Mesto Russia</p>
     </footer>
   </div>
+
+  <template id="card-template">
+    <article class="element">
+        <button class="element__button-delite" type="button">
+            <img class="element__delite" src="./image/Delite_2.svg" alt="Иконка удаления карточки">
+        </button>
+        <img class="element__image" src="" alt="">
+        <div class="element__down">
+            <h2 class="element__title"></h2>
+            <button class="element__button" type="button">
+                <img class="element__like" src="./image/Like.svg" alt="Лайк">
+            </button>
+        </div>
+    </article>
+  </template>
 
   <script src="./script.js"></script>
 </body>
