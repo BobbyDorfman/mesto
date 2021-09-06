@@ -98,16 +98,20 @@ const removeCardHandler = (event) => {
     event.target.closest('.element').remove();
 };
 
+// Лайки карточек
+const likeCardHandler = (event) => {
+    event.target.classList.toggle('element__button_like-active');
+};
+
 const addCard = (card) => {
     const cardElement = cardTemplate.querySelector('.element').cloneNode(true);
     cardElement.querySelector('.element__button-delite').content;
     cardElement.querySelector('.element__image').src = card.link;
     cardElement.querySelector('.element__image').alt = 'image';
     cardElement.querySelector('.element__title').textContent = card.name;
-    cardElement.querySelector('.element__button').content;
-    cardElement.querySelector('.element__like').content;
     cardElement.querySelector('.element__button-delite').addEventListener('click', removeCardHandler);
-  
+    cardElement.querySelector('.element__button').addEventListener('click', likeCardHandler);
+    
     cardsElement.prepend(cardElement);
 }
 
