@@ -93,6 +93,11 @@ const initialCards = [
 const cardsElement = document.querySelector('.elements');
 const cardTemplate = document.querySelector('#card-template').content;
 
+// Удаление карточки
+const removeCardHandler = (event) => {
+    event.target.closest('.element').remove();
+};
+
 const addCard = (card) => {
     const cardElement = cardTemplate.querySelector('.element').cloneNode(true);
     cardElement.querySelector('.element__button-delite').content;
@@ -101,6 +106,7 @@ const addCard = (card) => {
     cardElement.querySelector('.element__title').textContent = card.name;
     cardElement.querySelector('.element__button').content;
     cardElement.querySelector('.element__like').content;
+    cardElement.querySelector('.element__button-delite').addEventListener('click', removeCardHandler);
   
     cardsElement.prepend(cardElement);
 }
@@ -132,3 +138,4 @@ postingCardElement.addEventListener(
 // Event listeners
 
 postingCardElement.addEventListener('submit', toggleAddPopup);
+
