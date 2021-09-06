@@ -31,6 +31,17 @@
 @import url(./blocks/edit-form/__field/edit-form__field.css);
 @import url(./blocks/edit-form/__subtitle/edit-form__subtitle.css);
 @import url(./blocks/edit-form/__submit-button/edit-form__submit-button.css);
+@import url(./blocks/adding-cards/adding-cards.css);
+@import url(./blocks/adding-cards/__close-icon/adding-cards__close-icon.css);
+@import url(./blocks/adding-cards/__close-image/adding-cards__close-image.css);
+@import url(./blocks/adding-cards/__field/adding-cards__field.css);
+@import url(./blocks/adding-cards/__popup/adding-cards__popup.css);
+@import url(./blocks/adding-cards/__submit-button/adding-cards__submit-button.css);
+@import url(./blocks/adding-cards/__subtitle/adding-cards__subtitle.css);
+@import url(./blocks/adding-cards/__subtitle/_name/adding-cards__subtitle_name.css);
+@import url(./blocks/adding-cards/__subtitle/_link/adding-cards__subtitle_link.css);
+@import url(./blocks/adding-cards/__title/adding-cards__title.css);
+@import url(./blocks/adding-cards/_is-openid/adding-cards_is-openid.css);
 
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/footer/__copyright/footer__copyright.css);

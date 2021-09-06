@@ -30,7 +30,7 @@
 
         <section class="elements" aria-label="Фотоальбом"></section>
 
-        <section class="edit-form" aria-label="Редактор профиля">
+        <section class="edit-form" aria-label="Редактор профиля" id="edit-form">
             <div class="edit-form__popup">
                 <button class="edit-form__close-icon" type="button">
                     <img class="edit-form__close-image" src="./image/Close_Icon.svg" alt="Иконка - закрыть">
@@ -40,6 +40,21 @@
                     <input type="text" name="text" class="edit-form__subtitle">
                     <input type="text" name="text" class="edit-form__subtitle">
                     <button type="submit" class="edit-form__submit-button">Сохранить</button>
+                </form>
+            </div>
+        </section>
+        <section class="adding-cards" aria-label="Добавление карточек" id="adding-cards">
+            <div class="adding-cards__popup">
+                <button class="adding-cards__close-icon" type="button">
+                    <img class="adding-cards__close-image" src="./image/Close_Icon.svg" alt="Иконка - закрыть">
+                </button>
+                <h2 class="adding-cards__title">Новое место</h2>
+                <form class="adding-cards__field" name="form">
+                    <input type="text" name="text" placeholder="Название" 
+                    class="adding-cards__subtitle adding-cards__subtitle_name">
+                    <input type="text" name="link" placeholder="Ссылка на картинку" 
+                    class="adding-cards__subtitle adding-cards__subtitle_link">
+                    <button type="submit" class="adding-cards__submit-button">Создать</button>
                 </form>
             </div>
         </section>
