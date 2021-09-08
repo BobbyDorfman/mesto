@@ -8,78 +8,90 @@
   <title>Mesto</title>
 </head>
 <body>
-  <div class="page">
-    <header class="header">
-        <img class="header__logo" src="./image/Vector.svg" alt="Логотип">
-    </header>
+    <div class="page">
+        <header class="header">
+            <img class="header__logo" src="./image/Vector.svg" alt="Логотип">
+        </header>
 
-    <main>
-        <section class="profile">
-            <img class="profile__avatar" src="./image/image.jpg" alt="Фотография Жак-Ив Кусто">
-            <div class="profile__info">
-                <h1 class="profile__title">Жак-Ив Кусто</h1>
-                <button class="profile__edit-button" type="button">
-                    <img class="profile__pencil" src="./image/Edit.svg" alt="Элемент редактирования">
+        <main>
+            <section class="profile">
+                <img class="profile__avatar" src="./image/image.jpg" alt="Фотография Жак-Ив Кусто">
+                <div class="profile__info">
+                    <h1 class="profile__title">Жак-Ив Кусто</h1>
+                    <button class="profile__edit-button" type="button">
+                        <img class="profile__pencil" src="./image/Edit.svg" alt="Элемент редактирования">
+                    </button>
+                    <p class="profile__subtitle">Исследователь океана</p>
+                </div>
+                <button class="profile__add-button" type="button">
+                    <img class="profile__plus" src="./image/Add_button.svg" alt="Знак - добавить">
                 </button>
-                <p class="profile__subtitle">Исследователь океана</p>
-            </div>
-            <button class="profile__add-button" type="button">
-                <img class="profile__plus" src="./image/Add_button.svg" alt="Знак - добавить">
+            </section>
+
+            <section class="elements" aria-label="Фотоальбом"></section>
+
+        </main>
+
+        <footer class="footer">
+            <p class="footer__copyright">&copy; 2021 Mesto Russia</p>
+        </footer>
+    </div>
+
+    <div class="popup popup_type_form" id="edit-form">
+        <div class="edit-form">
+            <button class="edit-form__close-icon" type="button">
+                <img class="edit-form__close-image" src="./image/Close_Icon.svg" alt="Иконка - закрыть">
             </button>
-        </section>
-
-        <section class="elements" aria-label="Фотоальбом"></section>
-
-        <section class="edit-form" aria-label="Редактор профиля" id="edit-form">
-            <div class="edit-form__popup">
-                <button class="edit-form__close-icon" type="button">
-                    <img class="edit-form__close-image" src="./image/Close_Icon.svg" alt="Иконка - закрыть">
-                </button>
-                <h2 class="edit-form__title">Редактировать профиль</h2>
-                <form class="edit-form__field" name="form">
-                    <input type="text" name="text" class="edit-form__subtitle">
-                    <input type="text" name="text" class="edit-form__subtitle">
-                    <button type="submit" class="edit-form__submit-button">Сохранить</button>
-                </form>
-            </div>
-        </section>
-        <section class="adding-cards" aria-label="Добавление карточек" id="adding-cards">
-            <div class="adding-cards__popup">
-                <button class="adding-cards__close-icon" type="button">
-                    <img class="adding-cards__close-image" src="./image/Close_Icon.svg" alt="Иконка - закрыть">
-                </button>
-                <h2 class="adding-cards__title">Новое место</h2>
-                <form class="adding-cards__field" name="form">
-                    <input type="text" name="text" placeholder="Название" 
-                    class="adding-cards__subtitle adding-cards__subtitle_name">
-                    <input type="text" name="link" placeholder="Ссылка на картинку" 
-                    class="adding-cards__subtitle adding-cards__subtitle_link">
-                    <button type="submit" class="adding-cards__submit-button">Создать</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p class="footer__copyright">&copy; 2021 Mesto Russia</p>
-    </footer>
-  </div>
-
-  <template id="card-template">
-    <article class="element">
-        <button class="element__button-delite" type="button">
-            <img class="element__delite" src="./image/Delite_2.svg" alt="Иконка удаления карточки">
-        </button>
-        <img class="element__image" src="" alt="">
-        <div class="element__down">
-            <h2 class="element__title"></h2>
-            <button class="element__button" type="button">
-                <img class="element__like" src="./image/Like.svg" alt="Лайк">
-            </button>
+            <h2 class="edit-form__title">Редактировать профиль</h2>
+            <form class="edit-form__field" name="form">
+                <input type="text" name="text" class="edit-form__subtitle">
+                <input type="text" name="text" class="edit-form__subtitle">
+                <button type="submit" class="edit-form__submit-button">Сохранить</button>
+            </form>
         </div>
-    </article>
-  </template>
+    </div>
+    <div class="popup popup_type_form" id="adding-cards">
+        <div class="adding-cards">
+            <button class="adding-cards__close-icon" type="button">
+                <img class="adding-cards__close-image" src="./image/Close_Icon.svg" alt="Иконка - закрыть">
+            </button>
+            <h2 class="adding-cards__title">Новое место</h2>
+            <form class="adding-cards__field" name="form">
+                <input type="text" name="text" placeholder="Название" 
+                class="adding-cards__subtitle adding-cards__subtitle_name">
+                <input type="text" name="link" placeholder="Ссылка на картинку" 
+                class="adding-cards__subtitle adding-cards__subtitle_link">
+                <button type="submit" class="adding-cards__submit-button">Создать</button>
+            </form>
+        </div>
+    </div>
+    <div class="popup popup_type_image" id="image-in-full">
+        <div class="image-in-full">
+            <button class="image-in-full__close-icon" type="button">
+                <img class="image-in-full__close-image" src="./image/Close_Icon.svg" alt="Иконка - закрыть">
+            </button>
+            <figure class="image-in-full__content">
+              <img class="image-in-full__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg" alt="alt">
+              <figcaption class="image-in-full__caption"></figcaption>
+            </figure>
+          </div>
+    </div>
 
-  <script src="./script.js"></script>
+    <template id="card-template">
+        <article class="element">
+            <button class="element__button-delite" type="button">
+                <img class="element__delite" src="./image/Delite_2.svg" alt="Иконка удаления карточки">
+            </button>
+            <img class="element__image" src="src" alt="alt">
+            <div class="element__down">
+                <h2 class="element__title"></h2>
+                <button class="element__button" type="button">
+                    <img class="element__like" src="./image/Like.svg" alt="Лайк">
+                </button>
+            </div>
+        </article>
+    </template>
+
+    <script src="./script.js"></script>
 </body>
 </html>

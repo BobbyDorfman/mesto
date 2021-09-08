@@ -22,9 +22,11 @@
 @import url(./blocks/element/__button/element__button.css);
 @import url(./blocks/element/__like/element__like.css);
 @import url(./blocks/element/__button/_like-active/element__button_like-active.css);
+@import url(./blocks/popup/popup.css);
+@import url(./blocks/popup/_type/popup_type_form.css);
+@import url(./blocks/popup/_type/popup_type_image.css);
+@import url(./blocks/popup/_is-openid/popup_is-openid.css);
 @import url(./blocks/edit-form/edit-form.css);
-@import url(./blocks/edit-form/_is-openid/edit-form_is-openid.css);
-@import url(./blocks/edit-form/__popup/edit-form__popup.css);
 @import url(./blocks/edit-form/__close-icon/edit-form__close-icon.css);
 @import url(./blocks/edit-form/__close-image/edit-form__close-image.css);
 @import url(./blocks/edit-form/__title/edit-form__title.css);
@@ -35,13 +37,18 @@
 @import url(./blocks/adding-cards/__close-icon/adding-cards__close-icon.css);
 @import url(./blocks/adding-cards/__close-image/adding-cards__close-image.css);
 @import url(./blocks/adding-cards/__field/adding-cards__field.css);
-@import url(./blocks/adding-cards/__popup/adding-cards__popup.css);
 @import url(./blocks/adding-cards/__submit-button/adding-cards__submit-button.css);
 @import url(./blocks/adding-cards/__subtitle/adding-cards__subtitle.css);
 @import url(./blocks/adding-cards/__subtitle/_name/adding-cards__subtitle_name.css);
 @import url(./blocks/adding-cards/__subtitle/_link/adding-cards__subtitle_link.css);
 @import url(./blocks/adding-cards/__title/adding-cards__title.css);
-@import url(./blocks/adding-cards/_is-openid/adding-cards_is-openid.css);
+@import url(./blocks/image-in-full/image-in-full.css);
+@import url(./blocks/image-in-full/__content/image-in-full__content.css);
+@import url(./blocks/image-in-full/__close-icon/image-in-full__close-icon.css);
+@import url(./blocks/image-in-full/__close-image/image-in-full__close-image.css);
+@import url(./blocks/image-in-full/__content/image-in-full__content.css);
+@import url(./blocks/image-in-full/__image/image-in-full__image.css);
+@import url(./blocks/image-in-full/__caption/image-in-full__caption.css);
 
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/footer/__copyright/footer__copyright.css);
