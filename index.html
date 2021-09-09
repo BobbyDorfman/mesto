@@ -37,35 +37,35 @@
         </footer>
     </div>
 
-    <div class="popup popup_type_form" id="edit-form">
+    <div class="popup popup_type_edit">
         <div class="edit-form">
             <button class="edit-form__close-icon" type="button">
                 <img class="edit-form__close-image" src="./image/Close_Icon.svg" alt="Иконка - закрыть">
             </button>
             <h2 class="edit-form__title">Редактировать профиль</h2>
             <form class="edit-form__field" name="form">
-                <input type="text" name="text" class="edit-form__subtitle">
+                <input type="text" name="text" class="edit-form__name">
                 <input type="text" name="text" class="edit-form__subtitle">
                 <button type="submit" class="edit-form__submit-button">Сохранить</button>
             </form>
         </div>
     </div>
-    <div class="popup popup_type_form" id="adding-cards">
+    <div class="popup popup_type_add">
         <div class="adding-cards">
             <button class="adding-cards__close-icon" type="button">
                 <img class="adding-cards__close-image" src="./image/Close_Icon.svg" alt="Иконка - закрыть">
             </button>
             <h2 class="adding-cards__title">Новое место</h2>
             <form class="adding-cards__field" name="form">
-                <input type="text" name="text" placeholder="Название" 
+                <input type="text" name="text" required placeholder="Название" 
                 class="adding-cards__subtitle adding-cards__subtitle_name">
-                <input type="text" name="link" placeholder="Ссылка на картинку" 
+                <input type="url" name="link" required placeholder="Ссылка на картинку" 
                 class="adding-cards__subtitle adding-cards__subtitle_link">
                 <button type="submit" class="adding-cards__submit-button">Создать</button>
             </form>
         </div>
     </div>
-    <div class="popup popup_type_image" id="image-in-full">
+    <div class="popup popup_type_image">
         <div class="image-in-full">
             <button class="image-in-full__close-icon" type="button">
                 <img class="image-in-full__close-image" src="./image/Close_Icon.svg" alt="Иконка - закрыть">
@@ -79,8 +79,8 @@
 
     <template id="card-template">
         <article class="element">
-            <button class="element__button-delite" type="button">
-                <img class="element__delite" src="./image/Delite_2.svg" alt="Иконка удаления карточки">
+            <button class="element__button-delete" type="button">
+                <img class="element__delete" src="./image/delete_2.svg" alt="Иконка удаления карточки">
             </button>
             <img class="element__image" src="src" alt="alt">
             <div class="element__down">
@@ -92,6 +92,7 @@
         </article>
     </template>
 
+    <script src="./scripts/cards.js"></script>
     <script src="./scripts/script.js"></script>
 </body>
 </html>
