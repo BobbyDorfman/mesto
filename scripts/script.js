@@ -18,6 +18,10 @@ const inputEditSubtitle = document.querySelector('.edit-form__subtitle');
 
 // Окно добавления новых карточек
 const cardsAdding = document.querySelector('.adding-cards');
+const postingCardElement = document.querySelector('.adding-cards__field');
+const postingTextElement = document.querySelector('.adding-cards__subtitle_name');
+const postingLinkElement = document.querySelector('.adding-cards__subtitle_link');
+
 
 // Профиль
 const infoTitleEditProfile = document.querySelector('.profile__title');
@@ -60,10 +64,8 @@ function stopPropagation (event) {
 
 // Открытие попапа с добавление новых карточек
 
-buttonOpenAddPopup.addEventListener('click', () => openPopup(popupAdd));
 buttonCloseAddPopup.addEventListener('click', () => closePopup(popupAdd));
 popupAdd.addEventListener('click', () => closePopup(popupAdd));
-cardsAdding.addEventListener('click', stopPropagation);
 
 // Открытие попапа
 function openPopup(popup) {
@@ -85,9 +87,9 @@ const likeCardHandler = (event) => {
     event.target.classList.toggle('element__button_like-active');
 };
 
-const addCard = (card) => {
+function createCard(card) {
     const cardElement = cardTemplate.querySelector('.element').cloneNode(true);
-    cardElement.querySelector('.element__button-delete').content; 
+    //cardElement.querySelector('.element__button-delete').content; 
     cardElement.querySelector('.element__image').src = card.link; 
     cardElement.querySelector('.element__image').alt = card.name; 
     cardElement.querySelector('.element__title').textContent = card.name; 
@@ -95,32 +97,48 @@ const addCard = (card) => {
     cardElement.querySelector('.element__button').addEventListener('click', likeCardHandler); 
     cardElement.querySelector('.element__image').addEventListener('click', () => openingImages(card)); 
 
-    cardsElement.prepend(cardElement);
+    return cardElement;
 }
 
-initialCards.forEach((card) => {
-    addCard(card);
+// Публикация новой карточки
+function addCard(section, element) {
+    section.prepend(element);
+}
+
+// Загрузка начальных карточек
+initialCards.forEach(function(item) {
+    addCard(cardsElement, createCard(item));
 });
 
-// Вариант с добавление через форму секции adding-cards
-const postingCardElement = document.querySelector('.adding-cards__field');
-const postingTextElement = document.querySelector('.adding-cards__subtitle_name');
-const postingLinkElement = document.querySelector('.adding-cards__subtitle_link');
+// Ввод данных для новой карточки
+function creatingNewCards(name, link) {
+  const placeCardNew = {
+    name: name.value,
+    link: link.value
+  };
+  return placeCardNew;
+}
 
-// Добавление новых карточек на страницу
-postingCardElement.addEventListener('submit', creatingNewCards)
+// Передача информация по новой карточке
+function submitFormAdd (evt) {
+  evt.preventDefault();
 
-function creatingNewCards(event) {
-    event.preventDefault();
+  const cardData = creatingNewCards(postingTextElement, postingLinkElement);
 
-        addCard({
-            name: postingTextElement.value,
-            link: postingLinkElement.value,
-        }
-    );
+  addCard(cardsElement, createCard(cardData));
 
-    closePopup(popupAdd);
-};
+  closePopup(popupAdd);
+}
+
+cardsAdding.addEventListener('submit', submitFormAdd);
+cardsAdding.addEventListener('click', stopPropagation);
+
+
+// Добавления карточки
+buttonOpenAddPopup.addEventListener('click', () => {
+    postingCardElement.reset();
+    openPopup(popupAdd);
+});
 
 // Открытие изображений
 function openingImages(card) {
