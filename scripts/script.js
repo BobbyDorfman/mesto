@@ -18,15 +18,14 @@ const inputEditSubtitle = document.querySelector('.edit-form__subtitle');
 
 // Окно добавления новых карточек
 const cardsAdding = document.querySelector('.adding-cards');
-const postingCardElement = document.querySelector('.adding-cards__field');
+const postingCardElement = document.querySelector('.popup__form_type_adding');
 const postingTextElement = document.querySelector('.adding-cards__subtitle_name');
 const postingLinkElement = document.querySelector('.adding-cards__subtitle_link');
-
 
 // Профиль
 const infoTitleEditProfile = document.querySelector('.profile__title');
 const infoSubtitleEditProfile = document.querySelector('.profile__subtitle');
-const formElementEditProfile = document.querySelector('.edit-form__field');
+//const formElementEditProfile = document.querySelector('.popup__form');
 
 // Тимплейт 
 const cardsElement = document.querySelector('.elements');
@@ -36,10 +35,14 @@ const cardElementImage = document.querySelector('.element__image');
 const cardElemenTtitle = document.querySelector('.element__title');
 const cardElementButtonLike = document.querySelector('.element__button');
 
+// Блок изображения с описанием
+const imageForm = document.querySelector('.image-in-full__content');
+
 // Открытие попапа с редактированием профиля
 
 buttonEdit.addEventListener('click', () => {
     openPopup(popupEdit);
+
     inputEditName.value = infoTitleEditProfile.textContent;
     inputEditSubtitle.value = infoSubtitleEditProfile.textContent;
 });
@@ -70,11 +73,22 @@ popupAdd.addEventListener('click', () => closePopup(popupAdd));
 // Открытие попапа
 function openPopup(popup) {
     popup.classList.add('popup_is-opened');
+    document.addEventListener('keydown', closeByEscapeKey);
 }
   
 // Закрытие попапа 
 function closePopup(popup) {
     popup.classList.remove('popup_is-opened');
+    document.removeEventListener('keydown', closeByEscapeKey);
+}
+
+// Закрытие попапа по клавише Escape
+function closeByEscapeKey (event) {
+    if (event.key === 'Escape') {
+        const popupIsOpened = document.querySelector('.popup_is-opened');
+    
+        closePopup(popupIsOpened);
+    }
 }
 
 // Удаление карточки
@@ -150,3 +164,5 @@ function openingImages(card) {
 }
 
 buttonCloseImagePopup.addEventListener('click', () => closePopup(popupImage));
+imageForm.addEventListener('click', stopPropagation);
+popupImage.addEventListener('click', () => closePopup(popupImage));

@@ -43,10 +43,14 @@
                 <img class="edit-form__close-image" src="./image/Close_Icon.svg" alt="Иконка - закрыть">
             </button>
             <h2 class="edit-form__title">Редактировать профиль</h2>
-            <form class="edit-form__field" name="form">
-                <input type="text" name="text" class="edit-form__name">
-                <input type="text" name="text" class="edit-form__subtitle">
-                <button type="submit" class="edit-form__submit-button">Сохранить</button>
+            <form class="popup__form" name="form-edit" novalidate>
+                <input type="text" name="text" class="popup__input edit-form__name" id='input-name'
+                minlength="2" maxlength="40" required>
+                <span class="popup__error" id="input-name-error"></span>
+                <input type="text" name="text" class="popup__input edit-form__subtitle" id="input-subtitle"
+                minlength="2" maxlength="200" required>
+                <span class="popup__error" id="input-subtitle-error"></span>
+                <button type="submit" class="popup__button edit-form__submit-button">Сохранить</button>
             </form>
         </div>
     </div>
@@ -56,12 +60,14 @@
                 <img class="adding-cards__close-image" src="./image/Close_Icon.svg" alt="Иконка - закрыть">
             </button>
             <h2 class="adding-cards__title">Новое место</h2>
-            <form class="adding-cards__field" name="form">
-                <input type="text" name="text" required placeholder="Название" 
-                class="adding-cards__subtitle adding-cards__subtitle_name">
-                <input type="url" name="link" required placeholder="Ссылка на картинку" 
-                class="adding-cards__subtitle adding-cards__subtitle_link">
-                <button type="submit" class="adding-cards__submit-button">Создать</button>
+            <form class="popup__form popup__form_type_adding" name="form" novalidate>
+                <input class="popup__input adding-cards__subtitle adding-cards__subtitle_name" required 
+                minlength="2" maxlength="30" id="input-name-adding" type="text" name="text" placeholder="Название">
+                <span class="popup__error" id="input-name-adding-error"></span>
+                <input class="popup__input adding-cards__subtitle adding-cards__subtitle_link" required 
+                type="url" name="link" id="input-link" placeholder="Ссылка на картинку">
+                <span class="popup__error" id="input-link-error"></span>
+                <button type="submit" class="popup__button adding-cards__submit-button">Создать</button>
             </form>
         </div>
     </div>
@@ -94,5 +100,6 @@
 
     <script src="./scripts/cards.js"></script>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/validate.js"></script>
 </body>
 </html>
