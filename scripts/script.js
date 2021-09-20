@@ -38,6 +38,16 @@ const cardElementButtonLike = document.querySelector('.element__button');
 // Блок изображения с описанием
 const imageForm = document.querySelector('.image-in-full__content');
 
+// Подключение валидации
+const validationConfig = {
+    formSelector: '.popup',
+    inputSelector: '.popup__input',
+    submitButtonSelector: '.popup__button',
+    inactiveButtonClass: 'popup__button_disabled',
+    inputErrorClass: 'popup__input_type_error',
+    errorClass: 'popup__error_visible'
+};
+
 // Открытие попапа с редактированием профиля
 
 buttonEdit.addEventListener('click', () => {
@@ -166,3 +176,7 @@ function openingImages(card) {
 buttonCloseImagePopup.addEventListener('click', () => closePopup(popupImage));
 imageForm.addEventListener('click', stopPropagation);
 popupImage.addEventListener('click', () => closePopup(popupImage));
+
+// включение валидации вызовом enableValidation
+// все настройки передаются при вызове
+enableValidation(validationConfig);
