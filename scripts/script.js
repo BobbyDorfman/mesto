@@ -7,11 +7,13 @@ const popupImage = document.querySelector('.popup_type_image');
 const buttonEdit = document.querySelector('.profile__edit-button');
 const buttonClosePopupEdit = document.querySelector('.edit-form__close-icon');
 const buttonSubmitEdit = document.querySelector('.submit-button');
+const buttonSubmitAdd = document.querySelector('.edit-form__submit-button');
 const buttonOpenAddPopup = document.querySelector('.profile__add-button');
 const buttonCloseAddPopup = document.querySelector('.adding-cards__close-icon');
 const buttonCloseImagePopup = document.querySelector('.image-in-full__close-icon');
 
 // Окно редактирования профиля
+const formElementEditProfile = document.querySelector('.popup__form_type_edit');
 const formEdit = document.querySelector('.edit-form');
 const inputEditName = document.querySelector('.edit-form__name');
 const inputEditSubtitle = document.querySelector('.edit-form__subtitle');
@@ -25,7 +27,6 @@ const postingLinkElement = document.querySelector('.adding-cards__subtitle_link'
 // Профиль
 const infoTitleEditProfile = document.querySelector('.profile__title');
 const infoSubtitleEditProfile = document.querySelector('.profile__subtitle');
-//const formElementEditProfile = document.querySelector('.popup__form');
 
 // Тимплейт 
 const cardsElement = document.querySelector('.elements');
@@ -48,9 +49,19 @@ const validationConfig = {
     errorClass: 'popup__error_visible'
 };
 
-// Открытие попапа с редактированием профиля
+// Очистка формы от ошибок
+function clearInputError(formElement) {
+    const inputList = formElement.querySelectorAll(validationConfig.inputSelector);
+    inputList.forEach((inputElement) => {
+      hideInputError(formElement, inputElement, validationConfig.inputErrorClass,
+        validationConfig.errorClass);
+    });
+}
 
+// Открытие попапа с редактированием профиля
 buttonEdit.addEventListener('click', () => {
+    clearInputError(formElementEditProfile)
+    enableSubmitButton(buttonSubmitAdd, validationConfig.inactiveButtonClass);
     openPopup(popupEdit);
 
     inputEditName.value = infoTitleEditProfile.textContent;
@@ -76,7 +87,6 @@ function stopPropagation (event) {
 }
 
 // Открытие попапа с добавление новых карточек
-
 buttonCloseAddPopup.addEventListener('click', () => closePopup(popupAdd));
 popupAdd.addEventListener('click', () => closePopup(popupAdd));
 
@@ -148,9 +158,7 @@ function submitFormAdd (evt) {
   evt.preventDefault();
 
   const cardData = creatingNewCards(postingTextElement, postingLinkElement);
-
   addCard(cardsElement, createCard(cardData));
-
   closePopup(popupAdd);
 }
 
@@ -161,6 +169,8 @@ cardsAdding.addEventListener('click', stopPropagation);
 // Добавления карточки
 buttonOpenAddPopup.addEventListener('click', () => {
     postingCardElement.reset();
+    clearInputError(postingCardElement)
+    disableSubmitButton(buttonSubmitAdd, validationConfig.inactiveButtonClass);
     openPopup(popupAdd);
 });
 
