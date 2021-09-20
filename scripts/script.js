@@ -6,8 +6,8 @@ const popupImage = document.querySelector('.popup_type_image');
 // Кнопки
 const buttonEdit = document.querySelector('.profile__edit-button');
 const buttonClosePopupEdit = document.querySelector('.edit-form__close-icon');
-const buttonSubmitEdit = document.querySelector('.submit-button');
-const buttonSubmitAdd = document.querySelector('.edit-form__submit-button');
+const buttonSubmitEdit = document.querySelector('.edit-form__submit-button');
+const buttonSubmitAdd = document.querySelector('.adding-cards__submit-button');
 const buttonOpenAddPopup = document.querySelector('.profile__add-button');
 const buttonCloseAddPopup = document.querySelector('.adding-cards__close-icon');
 const buttonCloseImagePopup = document.querySelector('.image-in-full__close-icon');
@@ -61,7 +61,7 @@ function clearInputError(formElement) {
 // Открытие попапа с редактированием профиля
 buttonEdit.addEventListener('click', () => {
     clearInputError(formElementEditProfile)
-    enableSubmitButton(buttonSubmitAdd, validationConfig.inactiveButtonClass);
+    enableSubmitButton(buttonSubmitEdit, validationConfig.inactiveButtonClass);
     openPopup(popupEdit);
 
     inputEditName.value = infoTitleEditProfile.textContent;
