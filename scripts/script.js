@@ -41,7 +41,7 @@ const imageForm = document.querySelector('.image-in-full__content');
 
 // Подключение валидации
 const validationConfig = {
-    formSelector: '.popup',
+    formSelector: '.popup__form',
     inputSelector: '.popup__input',
     submitButtonSelector: '.popup__button',
     inactiveButtonClass: 'popup__button_disabled',
@@ -123,16 +123,17 @@ const likeCardHandler = (event) => {
 
 function createCard(card) {
     const cardElement = cardTemplate.querySelector('.element').cloneNode(true);
+    const cardElementImage = cardElement.querySelector('.element__image');
     //cardElement.querySelector('.element__button-delete').content; 
-    cardElement.querySelector('.element__image').src = card.link; 
-    cardElement.querySelector('.element__image').alt = card.name; 
+    cardElementImage.src = card.link; 
+    cardElementImage.alt = card.name; 
     cardElement.querySelector('.element__title').textContent = card.name; 
     cardElement.querySelector('.element__button-delete').addEventListener('click', removeCardHandler); 
     cardElement.querySelector('.element__button').addEventListener('click', likeCardHandler); 
-    cardElement.querySelector('.element__image').addEventListener('click', () => openingImages(card)); 
+    cardElementImage.addEventListener('click', () => openingImages(card)); 
 
     return cardElement;
-}
+};
 
 // Публикация новой карточки
 function addCard(section, element) {
@@ -186,7 +187,3 @@ function openingImages(card) {
 buttonCloseImagePopup.addEventListener('click', () => closePopup(popupImage));
 imageForm.addEventListener('click', stopPropagation);
 popupImage.addEventListener('click', () => closePopup(popupImage));
-
-// включение валидации вызовом enableValidation
-// все настройки передаются при вызове
-enableValidation(validationConfig);
