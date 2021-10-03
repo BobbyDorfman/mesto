@@ -1,4 +1,5 @@
 import { initialCards } from './initialCards.js';
+import { Card } from './Card.js';
 import { FormValidator } from './FormValidator.js';
 
 // Переменные для попапов
@@ -102,28 +103,13 @@ function closeByEscapeKey (event) {
     }
 }
 
-// Удаление карточки
-const removeCardHandler = (event) => {
-    event.target.closest('.element').remove();
-};
-
-// Лайки карточек
-const likeCardHandler = (event) => {
-    event.target.classList.toggle('element__button_like-active');
-};
-
-function createCard(card) {
-    const cardElement = cardTemplate.querySelector('.element').cloneNode(true);
-    const cardElementImage = cardElement.querySelector('.element__image');
-    cardElementImage.src = card.link; 
-    cardElementImage.alt = card.name; 
-    cardElement.querySelector('.element__title').textContent = card.name; 
-    cardElement.querySelector('.element__button-delete').addEventListener('click', removeCardHandler); 
-    cardElement.querySelector('.element__button').addEventListener('click', likeCardHandler); 
-    cardElementImage.addEventListener('click', () => openingImages(card)); 
-
+// Копия класса карточки места
+function copyClass(data) {
+    const card = new Card (data, cardTemplate);
+    const cardElement = card.createCard();
+  
     return cardElement;
-};
+  }
 
 // Публикация новой карточки
 function addCard(section, element) {
@@ -132,7 +118,7 @@ function addCard(section, element) {
 
 // Загрузка начальных карточек
 initialCards.forEach(function(item) {
-    addCard(cardsElement, createCard(item));
+    addCard(cardsElement, copyClass(item));
 });
 
 // Ввод данных для новой карточки
@@ -149,7 +135,7 @@ function submitFormAdd (evt) {
   evt.preventDefault();
 
   const cardData = creatingNewCards(postingTextElement, postingLinkElement);
-  addCard(cardsElement, createCard(cardData));
+  addCard(cardsElement, copyClass(cardData));
   closePopup(popupAdd);
 }
 
@@ -164,15 +150,8 @@ buttonOpenAddPopup.addEventListener('click', () => {
     openPopup(popupAdd);
 });
 
-// Открытие изображений
-function openingImages(card) {
-    popupImage.querySelector('.image-in-full__image').alt = card.name;
-    popupImage.querySelector('.image-in-full__image').src = card.link;
-    popupImage.querySelector('.image-in-full__caption').textContent = card.name;
-
-    openPopup(popupImage);
-}
-
 buttonCloseImagePopup.addEventListener('click', () => closePopup(popupImage));
 imageForm.addEventListener('click', stopPropagation);
 popupImage.addEventListener('click', () => closePopup(popupImage));
+
+export { openPopup, popupImage };
