@@ -1,4 +1,4 @@
-import { openPopup, popupImage } from "./index.js";
+import { openPopup, popupImage, image, caption } from "./index.js";
 
 export class Card {
     constructor(data, cardTemplate) {
@@ -18,9 +18,7 @@ export class Card {
     };
 
     // Открытие изображений
-    _openingImages () {
-        const image = popupImage.querySelector('.image-in-full__image');
-        const caption = popupImage.querySelector('.image-in-full__caption');
+    _openImage () {
         image.alt = this._name;
         image.src = this._link;
         caption.textContent = this._name;
@@ -28,17 +26,23 @@ export class Card {
         openPopup(popupImage);
     }
 
+    // Добавление обработчиков
+    _setHandlers () {
+        this._cardElement.querySelector('.element__button-delete').addEventListener('click', this._removeCardHandler);
+        this._cardElement.querySelector('.element__button').addEventListener('click', this._likeCardHandler);
+        this._cardElementImage.addEventListener('click', () => this._openImage());
+    }
+
     // Создание новой карточки
     createCard() {
-        const cardElement = this._cardTemplate.querySelector('.element').cloneNode(true);
-        const cardElementImage = cardElement.querySelector('.element__image');
-        cardElementImage.src = this._link;
-        cardElementImage.alt = this._name;
-        cardElement.querySelector('.element__title').textContent = this._name;
-        cardElement.querySelector('.element__button-delete').addEventListener('click', this._removeCardHandler);
-        cardElement.querySelector('.element__button').addEventListener('click', this._likeCardHandler);
-        cardElementImage.addEventListener('click', () => this._openingImages());
+        this._cardElement = this._cardTemplate.querySelector('.element').cloneNode(true);
+        this._cardElementImage = this._cardElement.querySelector('.element__image');
+        this._cardElementImage.src = this._link;
+        this._cardElementImage.alt = this._name;
+        this._cardElement.querySelector('.element__title').textContent = this._name;
 
-        return cardElement;
+        this._setHandlers();
+
+        return this._cardElement;
     }
 }
