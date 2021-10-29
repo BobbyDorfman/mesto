@@ -1,5 +1,5 @@
 // Массив с начальными карточками
-// Пробую заменить name на text
+
 export const initialCards = [
     {
       text: 'Архыз',

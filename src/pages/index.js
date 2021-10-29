@@ -7,8 +7,6 @@ import {
     buttonOpenAddPopup,
     formElementEditProfile,
     formElementPostingCard,
-    postingTextElement,
-    postingLinkElement,
     infoTitleEditProfile,
     infoSubtitleEditProfile,
     cardsElement,
@@ -90,21 +88,6 @@ const cardList = new Section({
 cardsElement);
 
 cardList.renderItems();
-/*
-// Создание класса попапа добавления новых карточек (рабочий вариант, но ревьювер попросил передалть)
-const popupAddForm = new PopupWithForm(popupAdd, {
-    handleFormSubmit: () => {
-        const newCard = {
-            name: postingTextElement.value,
-            link: postingLinkElement.value
-        }
-        cardList.addItem(createCard(newCard));
-    }
-})
-*/
-// Комментарий ревьювера:
-// "Данные должны браться не из констант, а функция должна принимать их в виде параметра, 
-// подобно тому, как это сделано у вас в обработчике сабмита формы профиля.""
 
 
 // Создание класса попапа добавления новых карточек (не рабочий вариант, но то как надо чтобы было)
