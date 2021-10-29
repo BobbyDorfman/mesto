@@ -4,12 +4,8 @@ export const popupAdd = document.querySelector('.popup_type_add');
 export const popupImage = document.querySelector('.popup_type_image');
 
 // Кнопки
-export const buttonEdit = document.querySelector('.profile__edit-button');
-//const buttonClosePopup = document.querySelector('.popup__close');
-export const buttonClosePopupEdit = document.querySelector('.edit-form__close-icon');
+export const buttonOpenEditPopup = document.querySelector('.profile__edit-button');
 export const buttonOpenAddPopup = document.querySelector('.profile__add-button');
-export const buttonCloseAddPopup = document.querySelector('.adding-cards__close-icon');
-export const buttonCloseImagePopup = document.querySelector('.image-in-full__close-icon');
 
 // Окно редактирования профиля
 //export const formElementEditProfile = document.querySelector('.popup__form_type_edit');
@@ -22,12 +18,9 @@ export const inputEditName = document.querySelector('.edit-form__name');
 export const inputEditSubtitle = document.querySelector('.edit-form__subtitle');
 
 // Наименования инпутов попапа редактирования профиля
-//export const nameProfileName = formElementEditProfile.querySelector('name[name_profile]');
-//export const nameProfileProfession = formElementEditProfile.querySelector('name[type_of_profession]');
-////
 export const nameProfileName = formElementEditProfile.elements.name_profile;
 export const nameProfileProfession = formElementEditProfile.elements.type_of_profession;
-////
+
 // Окно добавления новых карточек
 export const cardsAdding = document.querySelector('.adding-cards');
 //export const formElementPostingCard = document.querySelector('.popup__form_type_adding');
@@ -35,8 +28,8 @@ export const postingTextElement = document.querySelector('.adding-cards__subtitl
 export const postingLinkElement = document.querySelector('.adding-cards__subtitle_link');
 
 // Профиль
-export const infoTitleEditProfile = document.querySelector('.profile__title');
-export const infoSubtitleEditProfile = document.querySelector('.profile__subtitle');
+export const infoTitleEditProfile = '.profile__title';
+export const infoSubtitleEditProfile = '.profile__subtitle';
 
 // Тимплейт 
 export const cardsElement = document.querySelector('.elements');
@@ -44,8 +37,8 @@ export const cardTemplate = document.querySelector('#card-template').content;
 
 // Блок изображения с описанием
 export const imageForm = document.querySelector('.image-in-full__content');
-export const image = document.querySelector('.image-in-full__image');
-export const caption = document.querySelector('.image-in-full__caption');
+//export const image = document.querySelector('.image-in-full__image');
+//export const caption = document.querySelector('.image-in-full__caption');
 
 
 // Подключение валидации

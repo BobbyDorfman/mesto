@@ -3,7 +3,7 @@ import {
     popupEdit,
     popupAdd,
     popupImage,
-    buttonEdit,
+    buttonOpenEditPopup,
     buttonOpenAddPopup,
     formElementEditProfile,
     formElementPostingCard,
@@ -18,7 +18,7 @@ import {
     nameProfileProfession
     } from "../utils/constant.js";
 
-import { initialCards } from '../componets/initialCards.js';
+import { initialCards } from '../utils/initialCards.js';
 import Card from '../componets/Card.js';
 import FormValidator from '../componets/FormValidator.js';
 import PopupWithForm from '../componets/PopupWithForm.js';
@@ -27,31 +27,31 @@ import Section from '../componets/Section.js';
 import PopupWithImage from '../componets/PopupWithImage.js';
 
 // Создание класса профиля
-const addInformationToProfile = new UserInfo({
+const userInfo = new UserInfo({
     userName: infoTitleEditProfile,
     userInfo: infoSubtitleEditProfile
 });
 
 // Создание класса редактирования профиля
-const createPopupEditForm = new PopupWithForm(popupEdit, {
+const popupEditForm = new PopupWithForm(popupEdit, {
     handleFormSubmit: (item) => {
-        addInformationToProfile.setUserInfo(item);
+        userInfo.setUserInfo(item);
     }
 });
 
-createPopupEditForm.setEventListeners()
+popupEditForm.setEventListeners()
 
 // Открытие попапа с редактированием профиля
 const openPopupEditForm = () => {
-    const userData = addInformationToProfile.getUserInfo();
+    const userData = userInfo.getUserInfo();
     nameProfileName.value = userData.userName;
     nameProfileProfession.value = userData.userInfo;
     formValidatorEdit.resetValidation();
-    createPopupEditForm.open();
+    popupEditForm.open();
 }
 
 // Добавление события открытие попапа с редактированием профиля
-buttonEdit.addEventListener('click', openPopupEditForm);
+buttonOpenEditPopup.addEventListener('click', openPopupEditForm);
 
 // Создание класса попапа картинки на весь экран
 const imagePopup = new PopupWithImage(popupImage);
@@ -79,7 +79,7 @@ function createCard(item) {
     return cardElement;
 }
 
-// Публикация новой карточки
+// Рендеринг начальных карточек
 const cardList = new Section({
     items: initialCards,
     renderer: (item) => {
@@ -91,24 +91,35 @@ cardsElement);
 
 cardList.renderItems();
 
-// Создание класса попапа добавления новых карточек
-const createPopupAddForm = new PopupWithForm(popupAdd, {
+// Создание класса попапа добавления новых карточек (рабочий вариант, но ревьювер попросил передалть)
+const popupAddForm = new PopupWithForm(popupAdd, {
     handleFormSubmit: () => {
         const newCard = {
             name: postingTextElement.value,
             link: postingLinkElement.value
         }
-        const cardElement = createCard(newCard)
-        cardList.addItem(cardElement);
+        cardList.addItem(createCard(newCard));
     }
 })
 
-createPopupAddForm.setEventListeners();
+// Комментарий ревьювера:
+// "Данные должны браться не из констант, а функция должна принимать их в виде параметра, 
+// подобно тому, как это сделано у вас в обработчике сабмита формы профиля.""
+
+/*
+// Создание класса попапа добавления новых карточек (не рабочий вариант, но то как надо чтобы было)
+const popupAddForm = new PopupWithForm(popupAdd, {
+    handleFormSubmit: (item) => {
+        cardList.addItem(createCard(item));
+    }
+});
+*/
+popupAddForm.setEventListeners();
 
 // Открытие попапа с добавление новых карточек
 const openPopupAddForm = () => {
     formValidatorAdd.resetValidation();
-    createPopupAddForm.open();
+    popupAddForm.open();
 }
 
 // Добавление события открытие попапа с добавление новых карточек

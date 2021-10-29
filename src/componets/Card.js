@@ -22,7 +22,7 @@ export default class Card {
         this._cardElement.querySelector('.element__button').addEventListener('click', this._likeCardHandler);
         this._cardElement.querySelector('.element__image').addEventListener(
             'click', () => this._handleCardClick(this._name, this._link));
-    }
+    };
 
     // Создание новой карточки
     createCard() {
@@ -35,7 +35,6 @@ export default class Card {
         this._cardElementImage.alt = this._name;
         this._cardElement.querySelector('.element__title').textContent = this._name;
 
-
         return this._cardElement;
-    }
+    };
 }
