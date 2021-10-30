@@ -1,15 +1,15 @@
 import '../pages/index.css';
 import {
-    popupEdit,
-    popupAdd,
-    popupImage,
+    popupEditSelector,
+    popupAddSelector,
+    popupImageSelector,
     buttonOpenEditPopup,
     buttonOpenAddPopup,
     formElementEditProfile,
     formElementPostingCard,
-    infoTitleEditProfile,
-    infoSubtitleEditProfile,
-    cardsElement,
+    infoTitleEditProfileSelector,
+    infoSubtitleEditProfileSelector,
+    cardsElementSelector,
     cardTemplate,
     validationConfig,
     nameProfileName,
@@ -26,12 +26,12 @@ import PopupWithImage from '../componets/PopupWithImage.js';
 
 // Создание класса профиля
 const userInfo = new UserInfo({
-    userName: infoTitleEditProfile,
-    userInfo: infoSubtitleEditProfile
+    userNameSelector: infoTitleEditProfileSelector,
+    userInfoSelector: infoSubtitleEditProfileSelector
 });
 
 // Создание класса редактирования профиля
-const popupEditForm = new PopupWithForm(popupEdit, {
+const popupEditForm = new PopupWithForm(popupEditSelector, {
     handleFormSubmit: (item) => {
         userInfo.setUserInfo(item);
     }
@@ -52,7 +52,7 @@ const openPopupEditForm = () => {
 buttonOpenEditPopup.addEventListener('click', openPopupEditForm);
 
 // Создание класса попапа картинки на весь экран
-const imagePopup = new PopupWithImage(popupImage);
+const imagePopup = new PopupWithImage(popupImageSelector);
 
 imagePopup.setEventListeners();
 
@@ -68,7 +68,7 @@ function createCard(item) {
     const card = new Card ({
         data: item, 
         handleCardClick: () => {
-            imagePopup.open(item.link, item.name)
+            imagePopup.open(item.link, item.text)
         },
     },
     cardTemplate);
@@ -85,13 +85,13 @@ const cardList = new Section({
         cardList.addItem(cardElement);
     }
 },
-cardsElement);
+cardsElementSelector);
 
 cardList.renderItems();
 
 
-// Создание класса попапа добавления новых карточек (не рабочий вариант, но то как надо чтобы было)
-const popupAddForm = new PopupWithForm(popupAdd, {
+// Создание класса попапа добавления новых карточек
+const popupAddForm = new PopupWithForm(popupAddSelector, {
     handleFormSubmit: (item) => {
         cardList.addItem(createCard(item));
     }

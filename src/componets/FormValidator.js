@@ -79,8 +79,6 @@ export default class FormValidator {
 
     // Проверка состояния кнопки submit
     _toggleButtonState () {
-        //const buttonElement = this._formElement.querySelector(this._submitButtonSelector);
-
         if (this._hasInvalidInput(this._inputList) || this._hasNotInputValues(this._inputList)) {
             this._disableSubmitButton(this._buttonElement);
         } else {
@@ -94,7 +92,6 @@ export default class FormValidator {
             event.preventDefault();
         });
 
-        //const inputList = Array.from(this._formElement.querySelectorAll(this._inputSelector));
         this._inputList.forEach((inputElement) => {
             this._hideInputError(inputElement);
 
