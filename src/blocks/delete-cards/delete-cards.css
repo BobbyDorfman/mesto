@@ -1,0 +1,16 @@
+.delete-cards {
+    width: 430px;
+    min-height: 181px;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .delete-cards {
+        width: 282px;
+        min-height: 181px;
+    }
+}

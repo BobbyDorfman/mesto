@@ -1,0 +1,16 @@
+.edit-avatar {
+    width: 430px;
+    min-height: 272px;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .edit-avatar {
+        width: 282px;
+        min-height: 322px;
+    }
+}

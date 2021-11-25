@@ -2,6 +2,8 @@
 export const popupEditSelector = '.popup_type_edit';
 export const popupAddSelector = '.popup_type_add';
 export const popupImageSelector = '.popup_type_image';
+export const popupDeleteSelector = '.popup_type_delete';
+export const popupAvatarSelector = '.popup_type_avatar';
 
 // Кнопки
 export const buttonOpenEditPopup = document.querySelector('.profile__edit-button');
@@ -10,6 +12,8 @@ export const buttonOpenAddPopup = document.querySelector('.profile__add-button')
 // Окно редактирования профиля
 export const formElementEditProfile = document.forms["form_edit"];
 export const formElementPostingCard = document.forms["form_add"];
+export const formElementEditAvatar = document.forms["form_avatar"];
+//export const formEditAvatar = document.querySelector('.popup__form_type_avatar');
 export const formEdit = document.querySelector('.edit-form');
 export const inputEditName = document.querySelector('.edit-form__name');
 export const inputEditSubtitle = document.querySelector('.edit-form__subtitle');
@@ -26,6 +30,8 @@ export const postingLinkElement = document.querySelector('.adding-cards__subtitl
 // Профиль
 export const infoTitleEditProfileSelector = '.profile__title';
 export const infoSubtitleEditProfileSelector = '.profile__subtitle';
+export const avatarEditProfileSelector = '.profile__avatar';
+export const avatarEditButton = document.querySelector('.profile__edit-avatar');
 
 // Тимплейт 
 export const cardsElementSelector = '.elements';

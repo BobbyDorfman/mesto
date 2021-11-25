@@ -15,13 +15,16 @@
 
         <main>
             <section class="profile">
-                <img class="profile__avatar" src="<%=require('./image/image.jpg')%>" alt="Фотография Жак-Ив Кусто">
+                <div class="profile__avatar-container">
+                    <button class="profile__edit-avatar" type="button"></button>
+                    <img class="profile__avatar" src="#" alt="Аватар профиля">
+                </div>
                 <div class="profile__info">
-                    <h1 class="profile__title">Жак-Ив Кусто</h1>
+                    <h1 class="profile__title"></h1>
                     <button class="profile__edit-button" type="button">
                         <img class="profile__pencil" src="<%=require('./image/Edit.svg')%>" alt="Элемент редактирования">
                     </button>
-                    <p class="profile__subtitle">Исследователь океана</p>
+                    <p class="profile__subtitle"></p>
                 </div>
                 <button class="profile__add-button" type="button">
                     <img class="profile__plus" src="<%=require('./image/Add_button.svg')%>" alt="Знак - добавить">
@@ -62,7 +65,7 @@
             <h2 class="adding-cards__title">Новое место</h2>
             <form class="popup__form popup__form_type_adding" name="form_add" novalidate>
                 <input class="popup__input adding-cards__subtitle adding-cards__subtitle_name" required 
-                minlength="2" maxlength="30" id="input-name-adding" type="text" name="text" placeholder="Название">
+                minlength="2" maxlength="30" id="input-name-adding" type="text" name="name" placeholder="Название">
                 <span class="popup__error" id="input-name-adding-error"></span>
                 <input class="popup__input adding-cards__subtitle adding-cards__subtitle_link" required 
                 type="url" name="link" id="input-link" placeholder="Ссылка на картинку">
@@ -82,6 +85,31 @@
             </figure>
           </div>
     </div>
+    <div class="popup popup_type_delete">
+        <div class="delete-cards">
+            <button class="popup__close delete-cards__close-icon" type="button">
+                <img class="popup__close-image" src="<%=require('./image/Close_Icon.svg')%>" alt="Иконка - закрыть">
+            </button>
+            <h2 class="delete-cards__title">Вы уверены?</h2>
+            <form class="popup__form popup__form_type_delete" name="form_delete" novalidate>
+                <button type="submit" class="popup__button delete-cards__submit-button">Да</button>
+            </form>
+        </div>
+    </div>
+    <div class="popup popup_type_avatar">
+        <div class="edit-avatar">
+            <button class="popup__close edit-avatar__close-icon" type="button">
+                <img class="popup__close-image" src="<%=require('./image/Close_Icon.svg')%>" alt="Иконка - закрыть">
+            </button>
+            <h2 class="edit-avatar__title">Обновить аватар</h2>
+            <form class="popup__form popup__form_type_avatar" name="form_avatar" novalidate>
+                <input class="popup__input edit-avatar__subtitle edit-avatar__subtitle_name" id="input-name-avatar" 
+                type="url" name="avatar" placeholder="https://somewebsite.com/someimage.jpg" required>
+                <span class="popup__error" id="input-name-adding-error"></span>
+                <button type="submit" class="popup__button edit-avatar__submit-button">Создать</button>
+            </form>
+        </div>
+    </div>
 
     <template id="card-template">
         <article class="element">
@@ -91,9 +119,12 @@
             <img class="element__image" src="src" alt="alt">
             <div class="element__down">
                 <h2 class="element__title"></h2>
-                <button class="element__button" type="button">
-                    <img class="element__like" src="<%=require('./image/Like.svg')%>" alt="Лайк">
-                </button>
+                <div class="element__likes">
+                    <button class="element__button" type="button">
+                        <img class="element__like" src="<%=require('./image/Like.svg')%>" alt="Лайк">
+                    </button>
+                    <span class="element__like-counter">0</span>
+                </div>
             </div>
         </article>
     </template>

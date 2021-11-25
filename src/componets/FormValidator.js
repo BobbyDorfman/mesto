@@ -11,7 +11,7 @@ export default class FormValidator {
         this._inputList = Array.from(this._formElement.querySelectorAll(this._inputSelector));
     }
 
-    // Включениеи выключение ошибок
+    // Включение и выключение ошибок
     _showInputError (inputElement) {
         const errorElement = this._formElement.querySelector(`#${inputElement.id}-error`);
         inputElement.classList.add(this._inputErrorClass);

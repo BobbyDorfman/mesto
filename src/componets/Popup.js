@@ -11,6 +11,7 @@ export default class Popup {
 
     close() {
         this._popupElement.classList.remove('popup_is-opened');
+        // снятие обработчика
         document.removeEventListener('keyup', this._handleEscClose);
     }
 
@@ -22,6 +23,7 @@ export default class Popup {
         });
     }
 
+    // Закрытие попапа по кнопке Escape
     _handleEscClose(event) {
         if (event.key === 'Escape') {
             this.close();

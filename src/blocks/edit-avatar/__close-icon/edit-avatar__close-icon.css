@@ -1,0 +1,25 @@
+.edit-avatar__close-icon {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    max-width: 32px;
+    max-height: 32px;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.edit-avatar__close-icon:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 426px) {
+    .edit-avatar__close-icon {
+        max-width: 20px;
+        max-height: 20px;
+        top: -36px;
+        right: 0;
+    }
+}
