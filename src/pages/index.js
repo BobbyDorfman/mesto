@@ -79,7 +79,7 @@ function createCard(item) {
             imagePopup.open(item.link, item.name);
         },
         handleLikeClick: () => {
-            if (card._isLiked) {
+            if (card.isLiked) {
                 api.deleteLike(card.getIdCard())
                 .then((res) => {
                     card.likeOff()

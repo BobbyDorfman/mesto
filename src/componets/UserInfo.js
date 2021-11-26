@@ -3,7 +3,7 @@ export default class UserInfo {
         this._userName = document.querySelector(name);
         this._userInfo = document.querySelector(info);
         this._userAvatar = document.querySelector(avatar);
-        this._userId = document.querySelector(id);
+        this._userId = null;
     }
   
     // Получить данные пользователя

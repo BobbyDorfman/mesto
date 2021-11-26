@@ -29,4 +29,24 @@ export default class PopupWithForm extends Popup {
         super.close();
         this._popupFormElement.reset();
     }
+
+/*    renderLoading(loading, popup) {
+        const button = document.querySelector(popup).querySelector('.popup__button')
+        if (loading === true) {
+            if (button.textContent === 'Создать') {
+                button.textContent = 'Создание...'
+            } else if (button.textContent === 'Сохранить') {
+                button.textContent = 'Сохранение...'
+            } else if (button.textContent === 'Ок') {
+                button.textContent = 'Удаление...'
+            } else if (button.textContent === 'Создание...') {
+                button.textContent = 'Создать'
+            } else if (button.textContent === 'Сохранение...') {
+                button.textContent = 'Сохранить'
+            } else if (button.textContent === 'Удаление...') {
+                button.textContent = 'Ок'
+            }
+        }
+    }
+*/    
 }

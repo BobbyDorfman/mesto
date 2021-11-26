@@ -69,12 +69,12 @@ export default class Card {
 
     likeOn() {
         this._element.querySelector('.element__button').classList.add('element__button_like-active')
-        this._isLiked = true
+        this.isLiked = true
     }
 
     likeOff() {
         this._element.querySelector('.element__button').classList.remove('element__button_like-active')
-        this._isLiked = false
+        this.isLiked = false
     }
     
     // Удаления карточки

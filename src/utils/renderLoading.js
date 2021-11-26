@@ -1,17 +1,14 @@
-//export const popupEditSelector = '.popup_type_edit';
-
 export default function renderLoading(loading, popup) {
+    const button = document.querySelector(popup).querySelector('.popup__button')
     if (loading === true) {
-        if (document.querySelector(popup).querySelector('.popup__button').textContent === 'Создать') {
-            document.querySelector(popup).querySelector('.popup__button').textContent = 'Создание...'
+        if (button.textContent === 'Создать') {
+            button.textContent = 'Создание...'
+                } else {button.textContent = 'Сохранение...'
+            }
         } else {
-            document.querySelector(popup).querySelector('.popup__button').textContent = 'Сохранение...'
+        if (button.textContent === 'Создание...') {
+            button.textContent = 'Создать'
+                } else {button.textContent = 'Сохранить'
+            }
         }
-    } else {
-        if (document.querySelector(popup).querySelector('.popup__button').textContent === 'Создание...') {
-            document.querySelector(popup).querySelector('.popup__button').textContent = 'Создать'
-        } else {
-            document.querySelector(popup).querySelector('.popup__button').textContent = 'Сохранить'
-        }
-    }
 }
