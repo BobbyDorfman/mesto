@@ -7,7 +7,7 @@ export default function renderLoading(loading, popup) {
         } else {
             document.querySelector(popup).querySelector('.popup__button').textContent = 'Сохранение...'
         }
-        } else {
+    } else {
         if (document.querySelector(popup).querySelector('.popup__button').textContent === 'Создание...') {
             document.querySelector(popup).querySelector('.popup__button').textContent = 'Создать'
         } else {
