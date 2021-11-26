@@ -17,14 +17,14 @@
             <section class="profile">
                 <div class="profile__avatar-container">
                     <button class="profile__edit-avatar" type="button"></button>
-                    <img class="profile__avatar" src="#" alt="Аватар профиля">
+                    <img class="profile__avatar" src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Youtube_loading_symbol_1_(wobbly).gif" alt="Аватар профиля">
                 </div>
                 <div class="profile__info">
                     <h1 class="profile__title"></h1>
                     <button class="profile__edit-button" type="button">
                         <img class="profile__pencil" src="<%=require('./image/Edit.svg')%>" alt="Элемент редактирования">
                     </button>
-                    <p class="profile__subtitle"></p>
+                    <p class="profile__subtitle">Идет загрузка...</p>
                 </div>
                 <button class="profile__add-button" type="button">
                     <img class="profile__plus" src="<%=require('./image/Add_button.svg')%>" alt="Знак - добавить">
@@ -106,7 +106,7 @@
                 <input class="popup__input edit-avatar__subtitle edit-avatar__subtitle_name" id="input-name-avatar" 
                 type="url" name="avatar" placeholder="https://somewebsite.com/someimage.jpg" required>
                 <span class="popup__error" id="input-name-avatar-error"></span>
-                <button type="submit" class="popup__button edit-avatar__submit-button">Создать</button>
+                <button type="submit" class="popup__button">Создать</button>
             </form>
         </div>
     </div>
