@@ -9,7 +9,7 @@ import {
     buttonOpenAddPopup,
     formElementEditProfile,
     formElementPostingCard,
-    //formElementEditAvatar,
+    formElementEditAvatar,
     infoTitleEditProfileSelector,
     infoSubtitleEditProfileSelector,
     avatarEditProfileSelector,
@@ -184,7 +184,7 @@ const popupAvatarForm = new PopupWithForm(popupAvatarSelector, {
 // Открытие попапа редактирования аватара
 const openUpdateAvatarForm = () => {
     popupAvatarForm.open();
-    //formValidatorAvatar.resetValidation();
+    formValidatorAvatar.resetValidation();
 }
 
 // Вызов слушателей классов попапов
@@ -204,5 +204,5 @@ const formValidatorEdit = new FormValidator(validationConfig, formElementEditPro
 formValidatorEdit.enableValidation();
 const formValidatorAdd = new FormValidator(validationConfig, formElementPostingCard);
 formValidatorAdd.enableValidation();
-/*const formValidatorAvatar = new FormValidator(validationConfig, formElementEditAvatar);
-formValidatorAvatar.enableValidation();*/
+const formValidatorAvatar = new FormValidator(validationConfig, formElementEditAvatar);
+formValidatorAvatar.enableValidation();
