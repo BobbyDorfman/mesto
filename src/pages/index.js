@@ -20,19 +20,33 @@ import {
     avatarEditButton
     } from "../utils/constant.js";
 import renderLoading from '../utils/renderLoading.js';
+//import { initialCards } from '../utils/initialCards.js';
 
 import Card from '../componets/Card.js';
 import FormValidator from '../componets/FormValidator.js';
 import PopupWithForm from '../componets/PopupWithForm.js';
 import UserInfo from '../componets/UserInfo.js';
 import Section from '../componets/Section.js';
+//import SectionLoading from '../componets/SectionLoading.js';
 import PopupWithImage from '../componets/PopupWithImage.js';
 import PopupWithConfirm from "../componets/PopupWithConfirm.js";
 import Api from "../componets/Api.js";
 
 // Id пользователя
 let userId = null;
+/*
+// Публикация новой карточки
+const cardListLoading = new SectionLoading({
+    items: initialCards,
+    renderItemsLoading: (item) => {
+        const cardElement = createCard(item)
+        cardListLoading.addItem(cardElement);
+    }
+},
+cardsElementSelector);
 
+cardListLoading.renderItemsLoading();
+*/
 // Создание класса профиля Api
 const api = new Api({
     url: 'https://mesto.nomoreparties.co/v1/cohort-30',

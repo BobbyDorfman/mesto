@@ -2,27 +2,51 @@
 
 export const initialCards = [
     {
-      name: 'Архыз',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+      name: 'Загрузка...',
+      link: 'https://media3.giphy.com/media/3oz8xWbKhsSQdDCc92/giphy.gif?cid=ecf05e47do11mlagxxbda9l9wvqy6swtsh3ggm5bw47coxkb&rid=giphy.gif&ct=g'
     },
     {
-      name: 'Челябинская область',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+      name: 'Загрузка...',
+      link: 'https://media3.giphy.com/media/3oz8xWbKhsSQdDCc92/giphy.gif?cid=ecf05e47do11mlagxxbda9l9wvqy6swtsh3ggm5bw47coxkb&rid=giphy.gif&ct=g'
     },
     {
-      name: 'Иваново',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+      name: 'Загрузка...',
+      link: 'https://media3.giphy.com/media/3oz8xWbKhsSQdDCc92/giphy.gif?cid=ecf05e47do11mlagxxbda9l9wvqy6swtsh3ggm5bw47coxkb&rid=giphy.gif&ct=g'
     },
     {
-      name: 'Камчатка',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+      name: 'Загрузка...',
+      link: 'https://media3.giphy.com/media/3oz8xWbKhsSQdDCc92/giphy.gif?cid=ecf05e47do11mlagxxbda9l9wvqy6swtsh3ggm5bw47coxkb&rid=giphy.gif&ct=g'
     },
     {
-      name: 'Холмогорский район',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+      name: 'Загрузка...',
+      link: 'https://media3.giphy.com/media/3oz8xWbKhsSQdDCc92/giphy.gif?cid=ecf05e47do11mlagxxbda9l9wvqy6swtsh3ggm5bw47coxkb&rid=giphy.gif&ct=g'
     },
     {
-      name: 'Байкал',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+      name: 'Загрузка...',
+      link: 'https://media3.giphy.com/media/3oz8xWbKhsSQdDCc92/giphy.gif?cid=ecf05e47do11mlagxxbda9l9wvqy6swtsh3ggm5bw47coxkb&rid=giphy.gif&ct=g'
+    },
+    {
+      name: 'Загрузка...',
+      link: 'https://media3.giphy.com/media/3oz8xWbKhsSQdDCc92/giphy.gif?cid=ecf05e47do11mlagxxbda9l9wvqy6swtsh3ggm5bw47coxkb&rid=giphy.gif&ct=g'
+    },
+    {
+      name: 'Загрузка...',
+      link: 'https://media3.giphy.com/media/3oz8xWbKhsSQdDCc92/giphy.gif?cid=ecf05e47do11mlagxxbda9l9wvqy6swtsh3ggm5bw47coxkb&rid=giphy.gif&ct=g'
+    },
+    {
+      name: 'Загрузка...',
+      link: 'https://media3.giphy.com/media/3oz8xWbKhsSQdDCc92/giphy.gif?cid=ecf05e47do11mlagxxbda9l9wvqy6swtsh3ggm5bw47coxkb&rid=giphy.gif&ct=g'
+    },
+    {
+      name: 'Загрузка...',
+      link: 'https://media3.giphy.com/media/3oz8xWbKhsSQdDCc92/giphy.gif?cid=ecf05e47do11mlagxxbda9l9wvqy6swtsh3ggm5bw47coxkb&rid=giphy.gif&ct=g'
+    },
+    {
+      name: 'Загрузка...',
+      link: 'https://media3.giphy.com/media/3oz8xWbKhsSQdDCc92/giphy.gif?cid=ecf05e47do11mlagxxbda9l9wvqy6swtsh3ggm5bw47coxkb&rid=giphy.gif&ct=g'
+    },
+    {
+      name: 'Загрузка...',
+      link: 'https://media3.giphy.com/media/3oz8xWbKhsSQdDCc92/giphy.gif?cid=ecf05e47do11mlagxxbda9l9wvqy6swtsh3ggm5bw47coxkb&rid=giphy.gif&ct=g'
     }
 ];
