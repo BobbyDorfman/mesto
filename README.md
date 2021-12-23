@@ -28,14 +28,10 @@ https://bobbydorfman.github.io/mesto/
 
 ## Установка необходимых компонентов:
 Установить Node.js: https://nodejs.org/en/
-
 Установить Git Bash: https://gitforwindows.org/
 
 ## Сборка проекта:
 Склонировать проект на ПК: git@github.com:BobbyDorfman/mesto.git
-
 Установить пакеты Node.js: npm install
-
 Запуск демо проекта: npm run dev
-
 Запуск сборки проекта: npm run build
